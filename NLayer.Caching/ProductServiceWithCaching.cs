@@ -68,7 +68,7 @@ namespace NLayer.Caching
             return Task.FromResult(product);
         }
 
-        public Task<CustomResponseDto<List<ProductWitHCatagoryDto>>> GetProductWitCatagory()
+        public Task<CustomResponseDto<List<ProductWitHCatagoryDto>>> GetProductWithCatagory()
         {
             var products = _memoryCache.Get<IEnumerable<Product>>(CacheProductKey);
             var productWithCategoryDto = _mapper.Map<List<ProductWitHCatagoryDto>>(products);
